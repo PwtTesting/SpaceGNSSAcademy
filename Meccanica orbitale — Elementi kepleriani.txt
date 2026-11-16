@@ -1,0 +1,58 @@
+Meccanica orbitale — Elementi kepleriani e propagazione
+
+1. I sei elementi orbitali kepleriani
+
+Un'orbita kepleriana può essere descritta attraverso sei parametri, che definiscono la geometria, l'orientamento dell'orbita e la posizione del satellite lungo di essa.
+
+Geometria dell'ellisse (2 parametri)
+
+- Semiasse maggiore a: definisce le dimensioni dell'ellisse.
+- Eccentricità e: definisce la forma dell'ellisse, cioè quanto si discosta da una circonferenza.
+
+Orientamento dell'orbita nello spazio (3 parametri)
+
+- Inclinazione i: angolo tra il piano orbitale e il piano equatoriale terrestre.
+- Longitudine del nodo ascendente Omega, RAAN: angolo, misurato nel piano equatoriale, tra una direzione di riferimento fissa (punto vernale) e il nodo ascendente, cioè la direzione in cui il satellite attraversa l'equatore da sud verso nord.
+- Argomento del perigeo omega: angolo, misurato nel piano orbitale e nel verso del moto, tra la direzione del nodo ascendente e quella del perigeo.
+
+Il perigeo è il punto dell'orbita in cui il satellite raggiunge la minima distanza dal centro della Terra. Non costituisce un parametro indipendente.
+
+I primi cinque elementi (a, e, i, Omega, omega) definiscono completamente l'ellisse nello spazio.
+
+Posizione del satellite sull'orbita (1 parametro)
+
+- Anomalia nu oppure M: identifica la posizione del satellite lungo l'orbita.
+
+Occorre distinguere:
+
+- Anomalia vera nu: angolo geometrico tra la direzione del perigeo e il vettore che congiunge il centro della Terra al satellite, misurato nel piano orbitale.
+- Anomalia media M: parametro angolare che cresce uniformemente nel tempo nel modello kepleriano. È quello utilizzato come dato iniziale nel progetto Python.
+
+L'anomalia vera descrive direttamente la posizione geometrica; l'anomalia media permette di calcolarne l'evoluzione temporale attraverso l'equazione di Keplero.
+
+
+2. Modello ideale e orbita reale
+
+Modello ideale: Newton e Keplero
+
+Il modello kepleriano a due corpi si basa su:
+
+- Leggi del moto di Newton.
+- Legge di gravitazione universale.
+- Attrazione gravitazionale tra due corpi idealizzati come masse puntiformi (oppure con distribuzione sfericamente simmetrica).
+
+In queste condizioni, l'orbita legata è un'ellisse e gli elementi orbitali rimangono costanti, fatta eccezione per l'anomalia che evolve nel tempo.
+
+Modello reale: perturbazioni orbitali
+
+Nella realtà intervengono ulteriori effetti:
+
+- Attrazione gravitazionale della Luna, del Sole e di altri corpi.
+- Campo gravitazionale terrestre non perfettamente sferico, incluso l'effetto J2.
+- Resistenza atmosferica, soprattutto nelle orbite basse (LEO).
+- Pressione della radiazione solare.
+- Eventuali manovre propulsive del satellite.
+
+Questi fenomeni modificano progressivamente la traiettoria.
+
+Conclusione: il modello kepleriano è un'ottima approssimazione per comprendere la meccanica orbitale, ma non è sufficiente, da solo, per prevedere con elevata precisione il comportamento reale di un satellite su intervalli temporali estesi.
